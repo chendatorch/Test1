@@ -15,19 +15,24 @@ namespace test01.Controllers
             return View();
         }
         //Defferent Name
+        [ActionName("Info")]
         public ActionResult ShowInfo()
         {
             return View("Show");
         }
         //In Share Folder
+
+        [NonAction]
         public ActionResult Detail()
         {
             return View("Details");
         }
         //Different Controller
+        [HttpPost]
         public ActionResult ShowMoreDetail()
         {
             return View("~/Views/About/MyProfile.cshtml");
         }
+        
     }
 }
